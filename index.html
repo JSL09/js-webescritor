@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jimmy Shibaru | Escritor y Poeta</title>
+  <meta name="description"
+    content="Portfolio de Jimmy Shibaru, escritor y poeta de Barcelona especializado en terror y novela negra." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <nav class="container"
+        style="padding: 2rem 0; display: flex; justify-content: space-between; align-items: center;">
+        <a href="#" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700;">JS</a>
+        <ul style="display: flex; gap: 2rem; list-style: none;">
+          <li><a href="#about">Sobre Mí</a></li>
+          <li><a href="#works">Obras</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="section">
+        <div class="container">
+          <h1>Jimmy Shibaru</h1>
+          <p>Escritor & Poeta</p>
+          <p style="font-size: 1rem; color: #888; margin-top: 0.5rem;">Barcelona</p>
+        </div>
+      </section>
+
+      <section id="about" class="section fade-in-section">
+        <div class="container">
+          <div class="about-content">
+            <div>
+              <h2>Entre Sombras y Letras</h2>
+              <p style="margin-bottom: 1rem;">
+                Soy un narrador de lo oscuro, un poeta de lo macabro. Desde las calles góticas de Barcelona, tejo
+                historias que exploran los rincones más profundos de la psique humana.
+              </p>
+              <p>
+                Mis géneros predilectos son el <strong>Terror</strong> y la <strong>Novela Negra</strong>, donde la
+                realidad se desdibuja y el miedo cobra vida. Ocasionalmente, me aventuro en la <strong>Ciencia
+                  Ficción</strong>, pero siempre llevando conmigo ese tono inquietante que define mi pluma.
+              </p>
+            </div>
+            <div
+              style="background: #111; height: 300px; display: flex; align-items: center; justify-content: center; border: 1px solid #333; overflow: hidden;">
+              <img src="/author.png" alt="Jimmy Shibaru"
+                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="section fade-in-section">
+        <div class="container">
+          <h2>Último Poemario</h2>
+          <div style="display: flex; gap: 3rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+            <div style="flex: 0 0 300px;">
+              <img src="/poemario_cover.png" alt="Entre la penumbra, versos"
+                style="width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #333;">
+            </div>
+            <div style="flex: 1; max-width: 500px;">
+              <h3 style="font-size: 2rem; margin-bottom: 1rem;">Entre la penumbra, versos</h3>
+              <p style="margin-bottom: 2rem; color: #ccc;">
+                Una inmersión lírica en los abismos del alma. Donde la oscuridad no es ausencia de luz, sino un lienzo
+                para la verdad.
+              </p>
+              <a href="https://amzn.eu/d/1eOZmsv" target="_blank"
+                style="display: inline-block; padding: 1rem 2rem; background: var(--accent-color); color: #fff; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--accent-color); transition: all 0.3s;">
+                Ver en Amazon
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section fade-in-section">
+        <div class="container">
+          <h2>Contacto</h2>
+          <p>¿Te atreves a cruzar el umbral?</p>
+          <div class="contact-links">
+            <div class="contact-item">
+              <span>📧</span>
+              <a href="mailto:jslmail09@gmail.com">jslmail09@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span>📷</span>
+              <a href="https://instagram.com/Jimmy Shibaru" target="_blank">Jimmy Shibaru</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid #222; margin-top: 2rem; color: #666;">
+      <p>&copy; 2025 Jimmy Shibaru. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
