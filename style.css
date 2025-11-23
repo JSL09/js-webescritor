@@ -1,7 +1,8 @@
 :root {
   --bg-color: #0a0a0a;
   --text-color: #e0e0e0;
-  --accent-color: #8a0303; /* Blood red */
+  --accent-color: #8a0303;
+  /* Blood red */
   --accent-hover: #b30404;
   --secondary-color: #1a1a1a;
   --font-heading: 'Playfair Display', serif;
@@ -23,7 +24,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: #fff;
   margin-bottom: 1rem;
@@ -145,13 +151,27 @@ a:hover {
 
 /* Animations */
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Scroll Animation Classes */
@@ -165,4 +185,56 @@ a:hover {
 .fade-in-section.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+  /* Header */
+  header nav.container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  header nav ul {
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Hero */
+  #hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  #hero p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  /* General Section Padding */
+  .section {
+    padding: 4rem 0;
+  }
+
+  /* Contact */
+  .contact-links {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Smaller phones */
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
 }
