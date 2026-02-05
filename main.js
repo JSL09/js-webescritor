@@ -1,22 +1,29 @@
-// Simple intersection observer for fade-in animations
 document.addEventListener('DOMContentLoaded', () => {
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target); // Only animate once
-      }
-    });
-  }, observerOptions);
-
   const sections = document.querySelectorAll('.fade-in-section');
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    sections.forEach((section) => section.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      });
+    },
+    {
+      root: null,
+      threshold: 0.15,
+      rootMargin: '0px 0px -10% 0px'
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
 });

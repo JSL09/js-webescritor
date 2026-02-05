@@ -3,39 +3,43 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jimmy Shibaru | Escritor y Poeta</title>
   <meta name="description"
-    content="Portfolio de Jimmy Shibaru, escritor y poeta de Barcelona especializado en terror y novela negra." />
+    content="Web oficial de Jimmy Shibaru, escritor y poeta de Mataró (Barcelona), autor de poesía oscura, terror y novela negra." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <div id="app">
-    <header>
-      <nav class="container"
-        style="padding: 2rem 0; display: flex; justify-content: space-between; align-items: center;">
-        <a href="#" style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700;">JS</a>
-        <ul style="display: flex; gap: 2rem; list-style: none;">
-          <li><a href="#about">Sobre Mí</a></li>
+    <header class="site-header">
+      <nav class="container nav" aria-label="Navegación principal">
+        <a href="#hero" class="brand">Jimmy Shibaru</a>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre mí</a></li>
           <li><a href="#works">Obras</a></li>
+          <li><a href="#universe">Universo</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="hero" class="section">
-        <div class="container">
-          <h1>Jimmy Shibaru</h1>
-          <p>Escritor & Poeta</p>
-          <p style="font-size: 1rem; color: #888; margin-top: 0.5rem;">Mataró, Barcelona</p>
+      <section id="hero" class="section hero">
+        <div class="container hero-content">
+          <p class="eyebrow">Mataró · Barcelona</p>
+          <h1>Versos para quien se atreve a mirar la sombra.</h1>
+          <p class="hero-subtitle">Jimmy Shibaru es escritor y poeta. Su obra recorre la poesía oscura, el terror y la
+            novela negra con una voz íntima, visceral y cinematográfica.</p>
+          <div class="hero-cta">
+            <a href="#works" class="btn btn-primary">Descubrir obra</a>
+            <a href="#contact" class="btn btn-secondary">Contrataciones y prensa</a>
+          </div>
         </div>
       </section>
 
@@ -43,67 +47,77 @@
         <div class="container">
           <div class="about-content">
             <div>
-              <h2>Entre Sombras y Letras</h2>
-              <p style="margin-bottom: 1rem;">
-                Soy un narrador de lo oscuro, un poeta de lo macabro. Bastante polifacético.
-                Me gusta le literatura, sobre todo del genero de terror y novela negra.
-                Escribo tanto poesía como relatos de terror y novela negra.
-                Ocasionalmente escribo Ciencia Ficción.
-                La poesía desde que los dioses existen y las palabras se escriben,
-                ha formado parte de mí.
-              </p>
+              <p class="eyebrow">Sobre Jimmy</p>
+              <h2>Entre sombras y letras</h2>
+              <p>Jimmy Shibaru construye relatos donde la oscuridad no es ausencia, sino lenguaje. Su estilo une
+                imágenes poéticas, tensión narrativa y una sensibilidad que atraviesa el terror psicológico y la
+                novela negra.</p>
+              <p>Además de poesía, escribe relatos y proyectos híbridos, explorando temas como la identidad, la
+                pérdida, la memoria y los límites entre belleza y espanto.</p>
+              <blockquote>
+                "La poesía me encontró mucho antes de que yo aprendiera a llamarla por su nombre."
+              </blockquote>
             </div>
-            <div
-              style="background: #111; height: 300px; display: flex; align-items: center; justify-content: center; border: 1px solid #333; overflow: hidden;">
-              <img src="/author.png" alt="Jimmy Shibaru"
-                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+            <figure class="author-card">
+              <img src="/author.png" alt="Retrato de Jimmy Shibaru" loading="lazy">
+              <figcaption>Autor · Poeta · Narrador de lo oscuro</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="section fade-in-section works">
+        <div class="container">
+          <p class="eyebrow">Obra destacada</p>
+          <h2>Entre la penumbra, versos</h2>
+          <div class="book-layout">
+            <img class="book-cover" src="/poemario_cover.png" alt="Portada del poemario Entre la penumbra, versos"
+              loading="lazy">
+            <div>
+              <p>Un poemario de atmósferas densas y belleza inquietante. Cada texto funciona como una puerta hacia
+                paisajes emocionales donde conviven fragilidad, rabia, deseo y redención.</p>
+              <ul class="feature-list">
+                <li>Poesía oscura contemporánea con voz personal.</li>
+                <li>Ideal para lectores de Sylvia Plath, Alejandra Pizarnik y el noir poético.</li>
+                <li>Edición disponible en Amazon.</li>
+              </ul>
+              <a href="https://amzn.eu/d/1eOZmsv" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver
+                en Amazon</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="works" class="section fade-in-section">
+      <section id="universe" class="section fade-in-section universe">
         <div class="container">
-          <h2>Último Poemario</h2>
-          <div style="display: flex; gap: 3rem; align-items: center; justify-content: center; flex-wrap: wrap;">
-            <div style="flex: 0 0 300px;">
-              <img src="/poemario_cover.png" alt="Entre la penumbra, versos"
-                style="width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #333;">
-            </div>
-            <div style="flex: 1; max-width: 500px;">
-              <h3 style="font-size: 2rem; margin-bottom: 1rem;">Entre la penumbra, versos</h3>
-              <p style="margin-bottom: 2rem; color: #ccc;">
-                Una inmersión lírica en los abismos del alma. Donde la oscuridad no es ausencia de luz, sino un lienzo
-                para la verdad.
-              </p>
-              <a href="https://amzn.eu/d/1eOZmsv" target="_blank"
-                style="display: inline-block; padding: 1rem 2rem; background: var(--accent-color); color: #fff; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--accent-color); transition: all 0.3s;">
-                Ver en Amazon
-              </a>
-            </div>
+          <p class="eyebrow">Universo literario</p>
+          <h2>Temas que atraviesan su escritura</h2>
+          <div class="tag-grid">
+            <p>🕯️ Oscuridad íntima</p>
+            <p>🩸 Terror psicológico</p>
+            <p>🌒 Belleza y ruina</p>
+            <p>🔍 Novela negra urbana</p>
+            <p>🪶 Poesía confesional</p>
+            <p>🕰️ Memoria y duelo</p>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section fade-in-section">
+      <section id="contact" class="section fade-in-section contact">
         <div class="container">
-          <h2>Contacto</h2>
-          <p>¿Te atreves a cruzar el umbral?</p>
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Colaboramos?</h2>
+          <p>Para entrevistas, colaboraciones, recitales o propuestas editoriales:</p>
           <div class="contact-links">
-            <div class="contact-item">
-              <span>📧</span>
-              <a href="mailto:jslmail09@gmail.com">jslmail09@gmail.com</a>
-            </div>
-            <div class="contact-item">
-              <span>📷</span>
-              <a href="https://instagram.com/jimmyshibaru" target="_blank">Jimmy Shibaru</a>
-            </div>
+            <a class="contact-item" href="mailto:jslmail09@gmail.com">📧 jslmail09@gmail.com</a>
+            <a class="contact-item" href="https://instagram.com/jimmyshibaru" target="_blank"
+              rel="noopener noreferrer">📷 @jimmyshibaru</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer style="text-align: center; padding: 2rem; border-top: 1px solid #222; margin-top: 2rem; color: #666;">
+    <footer class="site-footer">
       <p>&copy; 2025 Jimmy Shibaru. Todos los derechos reservados.</p>
     </footer>
   </div>
